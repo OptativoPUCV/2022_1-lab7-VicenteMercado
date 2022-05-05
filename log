@@ -57,3 +57,10 @@ Thu May  5 11:27:48 HSP 2022:
  tests:  2|2
 total_score: 20/70
 0d54b9e
+Thu May  5 12:08:53 HSP 2022: 
+ heap.c | 24 ++++++++++++++++++++++++
+ 1 file changed, 24 insertions(+)
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file a.out: Permission denied
+collect2.exe: error: ld returned 1 exit status
+Compilation failed
+4f61298
