@@ -18,13 +18,38 @@ typedef struct Heap{
 
 
 void* heap_top(Heap* pq){
-    return NULL;
+   if(pq->size == 0) return NULL;
+   return (void*)pq->heapArray[0].data;
 }
 
 
 
 void heap_push(Heap* pq, void* data, int priority){
+  if(pq->size == pq->capac){
+      pq->capac = (pq->capac*2)+1;
+      pq->heapArray = (heapElem*)realloc(pq->heapArray,sizeof(heapElem)*pq->capac);
+   }
 
+   pq->heapArray[pq->size].data = data;
+   pq->heapArray[pq->size].priority = priority;
+
+   int posInf = pq->size;
+   int posSup = (pq->size - 1)/2;
+
+   heapElem* elemAux = (heapElem*)malloc(sizeof(heapElem));
+
+   while(posInf > 0){
+      if(pq->heapArray[posInf].priority > pq->heapArray[posSup].priority){
+         *elemAux = pq->heapArray[posSup];
+         pq->heapArray[posSup] = pq->heapArray[posInf];
+         pq->heapArray[posInf] = *elemAux;
+      }
+
+      posInf = posSup;
+      posSup = (posInf - 1)/2;
+   }
+
+   pq->size++;
 }
 
 
