@@ -38,6 +38,8 @@ Heap* createHeap(){
    aux->size=0;
    
    aux->heapArray= (heapElem*)malloc(sizeof(heapElem));
+   aux->heapArray->data = NULL;
+   aux->heapArray->priority=0;
 
 
    return aux;
