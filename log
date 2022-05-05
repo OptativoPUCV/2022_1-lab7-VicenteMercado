@@ -64,3 +64,9 @@ c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot ope
 collect2.exe: error: ld returned 1 exit status
 Compilation failed
 4f61298
+Thu May  5 18:52:40 HSP 2022: 
+ heap.c | 4 ----
+ 1 file changed, 4 deletions(-)
+ tests:  7|1
+total_score: 45/70
+82d127e
