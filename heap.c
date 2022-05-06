@@ -58,6 +58,7 @@ void heap_pop(Heap* pq){
 
    pq->heapArray[0] = pq->heapArray[pq->size];
    pq->size--;
+   printf("Nuevo mayor prioridad: %d\n", (int)pq->heapArray[0].priority);
 
    int posSup = 0;
    int posInfIzq = (2*posSup)+1;
