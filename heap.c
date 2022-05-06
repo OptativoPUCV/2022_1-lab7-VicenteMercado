@@ -63,19 +63,28 @@ void heap_pop(Heap* pq){
    pq->size--;
 
    int posSup = 0;
-   int posInf = (2*posSup)+2; 
-
+   int posInfDer = (2*posSup)+2; 
+   int posInfIzq = (2*posSup)+1;
 
    while(posSup < pq->size){
-      if(pq->heapArray[posSup].priority < pq->heapArray[posInf].priority){
+      if(pq->heapArray[posSup].priority < pq->heapArray[posInfIzq].priority){
          *elemAux = pq->heapArray[posSup];
-         pq->heapArray[posSup] = pq->heapArray[posInf];
-         pq->heapArray[posInf] = *elemAux;
+         pq->heapArray[posSup] = pq->heapArray[posInfIzq];
+         pq->heapArray[posInfIzq] = *elemAux;
 
+         posSup = posInfIzq;
+
+      } else if(pq->heapArray[posSup].priority < pq->heapArray[posInfDer].priority){
+         *elemAux = pq->heapArray[posSup];
+         pq->heapArray[posSup] = pq->heapArray[posInfDer];
+         pq->heapArray[posInfDer] = *elemAux;
+
+          posSup = posInfDer;
       }
 
-      posSup = posInf;
-      posInf = (2*posSup)+2; 
+
+      posInfDer = (2*posSup)+2; 
+      posInfIzq = (2*posSup)+1;
    }
 
 }
