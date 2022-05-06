@@ -59,7 +59,7 @@ void heap_pop(Heap* pq){
    }
    heapElem* elemAux = (heapElem*)malloc(sizeof(heapElem));
 
-   pq->heapArray[0] = pq->heapArray[pq->size];
+   pq->heapArray[0] = pq->heapArray[pq->size-1];
    pq->size--;
    printf("Nuevo mayor prioridad: %d\n", (int)pq->heapArray[0].priority);
 
