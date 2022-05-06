@@ -86,7 +86,7 @@ void heap_pop(Heap* pq){
          continue;
       } else break;
 
-      printf("size = %i, top = %i\n", posSup, pq->heapArray[0].priority);
+      printf("size = %i, top = %i\n", (int)posSup, (int)pq->heapArray[0].priority);
 
    }
 
