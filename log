@@ -213,3 +213,14 @@ heap.c:89:33: error: format '%i' expects argument of type 'int', but argument 3 
 cc1.exe: all warnings being treated as errors
 Compilation failed
 f24a107
+Fri May  6 17:15:07 HSP 2022: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+heap.c: In function 'heap_pop':
+heap.c:89:33: error: format '%i' expects argument of type 'int', but argument 3 has type 'void *' [-Werror=format=]
+       printf("size = %i, top = %i\n", pq->size, (void*)pq->heapArray[0].data );
+                                 ^
+cc1.exe: all warnings being treated as errors
+Compilation failed
+5231961
