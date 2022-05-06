@@ -64,9 +64,9 @@ void heap_pop(Heap* pq){
    int posInfDer = (2*posSup)+2; 
 
    while(posSup+1 < pq->size){
-      if(pq->heapArray[posSup+1].priority <= pq->heapArray[posInfIzq].priority && pq->heapArray[posInfIzq].priority > pq->heapArray[posInfDer].priority){
-         *elemAux = pq->heapArray[posSup+1];
-         pq->heapArray[posSup+1] = pq->heapArray[posInfIzq];
+      if(pq->heapArray[posSup].priority <= pq->heapArray[posInfIzq].priority && pq->heapArray[posInfIzq].priority > pq->heapArray[posInfDer].priority){
+         *elemAux = pq->heapArray[posSup];
+         pq->heapArray[posSup] = pq->heapArray[posInfIzq];
          pq->heapArray[posInfIzq] = *elemAux;
 
          posSup = posInfIzq;
@@ -75,14 +75,14 @@ void heap_pop(Heap* pq){
          continue;
 
       }
-      if(pq->heapArray[posSup+1].priority < pq->heapArray[posInfDer].priority){
-         *elemAux = pq->heapArray[posSup+1];
-         pq->heapArray[posSup+1] = pq->heapArray[posInfDer];
+      if(pq->heapArray[posSup].priority < pq->heapArray[posInfDer].priority){
+         *elemAux = pq->heapArray[posSup];
+         pq->heapArray[posSup] = pq->heapArray[posInfDer];
          pq->heapArray[posInfDer] = *elemAux;
 
          posSup = posInfDer;
-         posInfIzq = (2*posSup+1)+1;
-         posInfDer = (2*posSup+1)+2; 
+         posInfIzq = (2*posSup)+1;
+         posInfDer = (2*posSup)+2; 
          continue;
       } else break;
 
