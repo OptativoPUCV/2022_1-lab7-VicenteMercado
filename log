@@ -202,3 +202,14 @@ Fri May  6 17:06:20 HSP 2022:
  tests:  7|1
 total_score: 60/70
 0b2c281
+Fri May  6 17:14:47 HSP 2022: 
+ heap.c | 2 ++
+ 1 file changed, 2 insertions(+)
+In file included from test.c:4:0:
+heap.c: In function 'heap_pop':
+heap.c:89:33: error: format '%i' expects argument of type 'int', but argument 3 has type 'void *' [-Werror=format=]
+       printf("size = %i, top = %i\n", pq->size, pq->heapArray[0].data );
+                                 ^
+cc1.exe: all warnings being treated as errors
+Compilation failed
+f24a107
