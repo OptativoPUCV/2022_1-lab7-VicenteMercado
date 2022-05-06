@@ -81,8 +81,8 @@ void heap_pop(Heap* pq){
          pq->heapArray[posInfDer] = *elemAux;
 
          posSup = posInfDer;
-         posInfIzq = (2*posSup)+1;
-         posInfDer = (2*posSup)+2; 
+         posInfIzq = (2*posSup+1)+1;
+         posInfDer = (2*posSup+1)+2; 
          continue;
       } else break;
 
