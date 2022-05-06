@@ -86,6 +86,7 @@ void heap_pop(Heap* pq){
 
       posInfIzq = (2*posSup)+1;
       posInfDer = (2*posSup)+2; 
+      break;
    }
 
 }
