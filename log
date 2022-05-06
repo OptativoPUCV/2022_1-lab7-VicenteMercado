@@ -224,3 +224,9 @@ heap.c:89:33: error: format '%i' expects argument of type 'int', but argument 3 
 cc1.exe: all warnings being treated as errors
 Compilation failed
 5231961
+Fri May  6 17:15:59 HSP 2022: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  7|1
+total_score: 60/70
+12dc041
