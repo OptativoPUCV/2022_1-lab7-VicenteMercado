@@ -57,7 +57,7 @@ void heap_pop(Heap* pq){
    heapElem* elemAux = (heapElem*)malloc(sizeof(heapElem));
 
    pq->size--;
-   pq->heapArray[0] = pq->heapArray[pq->size-1];
+   pq->heapArray[0] = pq->heapArray[pq->size];
 
    int posSup = 0;
    int posInfIzq = (2*posSup)+1;
