@@ -62,8 +62,7 @@ void heap_pop(Heap* pq){
    pq->heapArray[0] = pq->heapArray[pq->size-1];
    pq->heapArray[pq->size-1].priority = 0;
    pq->size--;
-   printf("Nuevo mayor prioridad: %d\n", (int)pq->heapArray[0].priority);
-
+   
    int posSup = 0;
    int posInfIzq = (2*posSup)+1;
    int posInfDer = (2*posSup)+2; 
@@ -93,13 +92,6 @@ void heap_pop(Heap* pq){
 
    }
    
-   printf("[ ");
-   for(int i = 0; i<pq->size;i++){
-      printf("%d ", (int)pq->heapArray[i].priority);
-   }
-   printf("]\n");
-   printf("size = %d, top = %d\n", (int)pq->size, (int)pq->heapArray[0].priority);
-
 }
 
 Heap* createHeap(){
